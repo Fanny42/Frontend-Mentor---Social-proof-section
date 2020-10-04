@@ -1,0 +1,6 @@
+@media (min-width: $breakpoint) {
+  .reviews {
+    grid-area: reviews;
+    display: flex;
+  }
+}

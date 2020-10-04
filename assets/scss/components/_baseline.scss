@@ -1,0 +1,11 @@
+.baseline {
+  text-align: center;
+  margin: 2rem 0;
+  color: $dark-grayish-magenta;
+}
+
+@media (min-width: $breakpoint) {
+  .baseline {
+    text-align: left;
+  }
+}

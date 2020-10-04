@@ -1,0 +1,100 @@
+.card {
+  border-radius: 10px;
+  background-color: $light-grayish-magenta;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+
+  &__header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: .5rem 1rem;
+    grid-template-areas:
+      "img author"
+      "img verified";
+    margin-bottom: 1rem;
+
+    img {
+      border-radius: 50%;
+      grid-area: img;
+    }
+
+    .author {
+      font-weight: bold;
+      grid-area: author;
+      align-self: end;
+    }
+
+    .verified {
+      color: $secondary-color;
+      grid-area: verified;
+      align-self: start;
+    }
+  }
+
+  &__body {
+    line-height: 1.5;
+    font-weight: 500;
+  }
+
+  &--rate {
+    text-align: center;
+    font-weight: bold;
+
+    &::before {
+      content: '\2605 \2605 \2605 \2605 \2605';
+      display: block;
+      color: goldenrod;
+      font-size: 1rem;
+      margin-bottom: .5rem;
+    }
+  }
+
+  &--review {
+    padding: 2rem;
+    background-color: $main-color;
+    color: $white;
+  }
+}
+
+@media (min-width: $breakpoint) {
+  .card {
+    &--rate {
+      text-align: left;
+
+      &::before {
+        display: initial;
+        padding-right: .5rem;
+      }
+
+      &:nth-child(3n+1) {
+        margin-right: 4rem;
+        margin-left: -4rem;
+      }
+
+      &:nth-child(3n+2) {
+        margin-right: 2rem;
+        margin-left: -2rem;
+      }
+    }
+
+    &--review {
+      margin: 0;
+
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+
+      &:nth-child(3n+2) {
+        margin-top: 2rem;
+        margin-bottom: -2rem;
+      }
+
+      &:nth-child(3n) {
+        margin-top: 4rem;
+        margin-bottom: -4rem;
+      }
+    }
+  }
+}

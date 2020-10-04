@@ -1,0 +1,11 @@
+.rates {
+  margin-bottom: 3rem;
+}
+
+@media (min-width: $breakpoint) {
+  .rates {
+    grid-area: rates;
+    margin: 0;
+    align-self: center;
+  }
+}

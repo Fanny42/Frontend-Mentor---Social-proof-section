@@ -1,0 +1,12 @@
+.main-title {
+  font-weight: bold;
+  text-align: center;
+  font-size: 2rem;
+}
+
+@media (min-width: $breakpoint) {
+  .main-title {
+    text-align: left;
+    font-size: 3rem;
+  }
+}

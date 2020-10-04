@@ -1,0 +1,23 @@
+html {
+  font-size: 15px;
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+  color: $main-color;
+  padding: 1rem;
+  line-height: 1.2;
+}
+
+@media (min-width: $breakpoint) {
+  body {
+    padding: 10rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 2rem 10rem;
+    grid-template-areas:
+      "title rates"
+      "reviews reviews";
+  }
+}

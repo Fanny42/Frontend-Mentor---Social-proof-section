@@ -1,0 +1,10 @@
+header {
+  margin: 4rem 0 1rem;
+}
+
+@media (min-width: $breakpoint) {
+  header {
+    grid-area: title;
+    margin: 0;
+  }
+}
